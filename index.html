@@ -3,9 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ssukapoto</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!--Ini Header Nav!-->
+  <header class="nav-container">
+      <div class="logo-icon"></div>
+        <div class="menu">
+          <a href="" onclick="scrollToSection('message-us')">Home</a>
+          <a href="" onclick="scrollToSection('message-us')">Our Profile</a>
+          <a href="" onclick="scrollToSection('message-us')">Portofolio</a>
+          <a href="" onclick="scrollToSection('message-us')">Message Us</a>
+        </div>
+  </header>
+
+  <hr>
   
+  <main class="main-web">
+  <!--Ini Home Content!-->
+    <section>
+      <header>
+          <h1> Hi <span id="Name"> </span> , Welcome </h1>
+      </header>
+
+      <article>
+          <p>Ini adalah Website Galery Foto - Foto Saya.</p>
+
+          <div class="banner-container"></div>
+      </article>
+    </section>
+    
+
+  <!--Ini Our Profile Content!-->
+    <section class="our-profile" id="our-profile">
+      <header>
+          <h1> Our Profile</h1>
+      </header>
+
+      <article class="profile-content">
+            <div class="profile-item">
+              <div class="profile-icon Profile1"></div>
+              <p>Profile 1</p>
+            </div>
+
+            <div class="profile-item">
+              <div class="profile-icon Profile2"></div>
+              <p>Profile 2</p>
+            </div>
+
+            <div class="profile-item">
+              <div class="profile-icon Profile3"></div>
+              <p>Profile 3</p>
+            </div>
+          
+      </article>
+
+    </section>
+
+  <!--Ini Portofolio Content!-->
+<section class="message-us">
+
+    <header>
+          <h1> Message Us </h1>
+    </header>
+
+    <div class="form">
+  
+      <form id="form-messageus" action="#" method="post" onsubmit="return false;">
+        <table class="table-form">
+          <tr>
+          <td>Nama</td>
+          <td>:</td>
+          <td><input id="nama" name="nama" type="text" placeholder="Nama "></input></td>
+        </tr>
+        <tr>
+          <td>Tanggal Lahir</td>
+          <td>:</td>
+          <td><input id="tanggal_lahir" name="tanggal_lahir" type="date"></input></td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="jenis_kelamin" id="laki-laki" value="Laki-laki"></input>
+            <label> Laki Laki</label>
+            <input type="radio" name="jenis_kelamin" id="perempuan" value="Perempuan"></input>
+            <label> Perempuan</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Pesan</td>
+          <td>:</td>
+          <td><textarea name="pesan" id="pesan" cols="45" rows="5"></textarea></input></td>
+        </tr>
+        <tr>
+          <td colspan="3"><input id="submit" name="submit" type="submit" value="Submit" onclick="submitForm()"></input></td>
+        </tr>
+        </table>
+      </form>
+
+      <textarea id="textareaA" readonly></textarea>
+
+    </div>
+    
+</section>
+  <!--Ini Message Us Content!-->
+  
+  </main>
+  
+  <script src="js/script.js"></script>
+
+  <footer class="footer">
+  <p>Created by Muhamad Syahril Suhandi</p>
+  </footer>
+
 </body>
+
 </html>
