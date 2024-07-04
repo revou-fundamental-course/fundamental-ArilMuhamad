@@ -77,7 +77,7 @@
 	margin-right: 0px;
 	height: 80px;
 	width: 80px;
-	background-image: url(/assets/1.jpeg);
+	background-image: url(../assets/1.jpeg);
 	background-size: cover;
 	border-radius: 50%;
 }
@@ -200,21 +200,21 @@
 	margin-top: 10px;
 }
 .portofolio1 {
-	background-image: url(/assets/a.jpg);
+	background-image: url(../assets/a.jpg);
 	background-size: cover;
 	border-radius: 10%;
 	//background-image: url('.../assets/1.jpg');
 }
 
 .portofolio2 {
-	background-image: url(/assets/b.jpg);
+	background-image: url(../assets/b.jpg);
 	background-size: cover;
 	border-radius: 10%;
 	//background-image: url('.../assets/1.jpg');
 }
 
 .portofolio3 {
-	background-image: url(/assets/c.jpg);
+	background-image: url(../assets/c.jpg);
 	background-size: cover;
 	border-radius: 10%;
 	//background-image: url('.../assets/1.jpg');
