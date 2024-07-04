@@ -2,49 +2,63 @@
 let Name = prompt('Selamat Datang Kak', '');
 document.getElementById('Name').innerHTML = Name;
 
-function submitForm() {
-	// Ambil nilai dari setiap input
-	var nama = document.getElementById('nama').value;
-	var tanggal_lahir = document.getElementById('tanggal_lahir').value;
-	var jenis_kelamin = document.querySelector(
+function validasiForm() {
+	const nama = document.getElementById('nama').value;
+	const tanggalLahir = document.getElementById('tanggal_lahir').value;
+	const jenisKelamin = document.querySelector(
 		'input[name="jenis_kelamin"]:checked'
-	).value;
-	var pesan = document.getElementById('pesan').value;
+	);
+	const pesan = document.getElementById('pesan').value;
 
-	var waktuSekarang = new Date();
-	var waktuSubmit = waktuSekarang.toLocaleString();
-	// Buat format hasil submit
-
-	var hasil = 'Waktu Submit: ' + waktuSubmit + '\n';
-	hasil += 'Nama: ' + nama + '\n';
-	hasil += 'Tanggal Lahir: ' + tanggal_lahir + '\n';
-	hasil += 'Jenis Kelamin: ' + jenis_kelamin + '\n';
-	hasil += 'Pesan: ' + pesan;
-
-	// Tampilkan hasil ke dalam textarea
-
-	document.getElementById('textareaA').value = hasil;
-}
-
-function validasiform() {
-	const nama = document.forms['form-messageus']['nama'].value;
-	const tanggal_lahir = document.forms['form-messageus']['tanggal_lahir'].value;
-	const jenis_kelamin = document.forms['form-messageus']['jenis_kelamin'].value;
-	const pesan = document.forms['form-messageus']['pesan'].value;
-
-	if (nama == '' || tanggal_lahir == '' || jenis_kelamin == '' || pesan == '') {
-		alert('Data Tidak Boleh Kosong YA !!');
+	if (nama === '') {
+		alert('Nama harus diisi !!');
 		return false;
 	}
-
-	setSenderUI(nama, tanggal_lahir, jenis_kelamin, pesan);
-	return false;
-	
+	if (tanggalLahir === '') {
+		alert('Tanggal lahir harus diisi !!');
+		return false;
+	}
+	if (!jenisKelamin) {
+		alert('Jenis kelamin harus dipilih !!');
+		return false;
+	}
+	if (pesan === '') {
+		alert('Pesan harus diisi !!');
+		return false;
+	}
+	return true;
 }
 
-function scrollToSection(sectionId) {
-	var section = document.getElementById(sectionId);
-	if (section) {
-		section.scrollIntoView({ behavior: 'smooth' });
+function submitForm() {
+	if (validasiForm()) {
+		const nama = document.getElementById('nama').value;
+		const tanggalLahir = document.getElementById('tanggal_lahir').value;
+		const jenisKelamin = document.querySelector(
+			'input[name="jenis_kelamin"]:checked'
+		).value;
+		const pesan = document.getElementById('pesan').value;
+		const waktuSubmit = new Date().toLocaleString('id-ID', {
+			timeZone: 'Asia/Jakarta',
+		});
+
+		const output = `Waktu Submit: ${waktuSubmit}\nNama: ${nama}\nTanggal Lahir: ${tanggalLahir}\nJenis Kelamin: ${jenisKelamin}\nPesan: ${pesan}\n`;
+		document.getElementById('textareaA').value = output;
 	}
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+	var i;
+	var x = document.getElementsByClassName('mySlides');
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = 'none';
+	}
+	myIndex++;
+	if (myIndex > x.length) {
+		myIndex = 1;
+	}
+	x[myIndex - 1].style.display = 'block';
+	setTimeout(carousel, 5000); // Change image every 2 seconds
 }

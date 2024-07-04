@@ -11,79 +11,104 @@
   <!--Ini Header Nav!-->
   <header class="nav-container">
       <div class="logo-icon"></div>
+      
         <div class="menu">
-          <a href="" onclick="scrollToSection('message-us')">Home</a>
-          <a href="" onclick="scrollToSection('message-us')">Our Profile</a>
-          <a href="" onclick="scrollToSection('message-us')">Portofolio</a>
-          <a href="" onclick="scrollToSection('message-us')">Message Us</a>
+          <a href="#home">Home</a>
+          <a href="#our-profile">Our Profile</a>
+          <a href="#our-portofolio">My Gallery</a>
+          <a href="#message-us">Message Us</a>
         </div>
   </header>
 
   <hr>
   
-  <main class="main-web">
+  <main class="main-web" id="home">
   <!--Ini Home Content!-->
     <section>
-      <header>
-          <h1> Hi <span id="Name"> </span> , Welcome </h1>
+      <header class="Sapaan">
+          <h1> Hi <span id="Name"> </span> , Welcome to <i>Ssukapoto Website</i> </h1>
       </header>
 
-      <article>
-          <p>Ini adalah Website Galery Foto - Foto Saya.</p>
-
-          <div class="banner-container"></div>
+      <article class="container">
+          <div class="banner-container">
+            <img class="mySlides" src="/assets/x.jpg" style="width:100%">
+            <img class="mySlides" src="/assets/y.jpg" style="width:100%">
+            <img class="mySlides" src="/assets/z.jpg" style="width:100%">
+          </div>
       </article>
     </section>
     
-
   <!--Ini Our Profile Content!-->
     <section class="our-profile" id="our-profile">
-      <header>
-          <h1> Our Profile</h1>
+      <header class="header-section">
+          <h1 class="title-section"> Ssukapoto Profile</h1>
       </header>
 
       <article class="profile-content">
             <div class="profile-item">
-              <div class="profile-icon Profile1"></div>
-              <p>Profile 1</p>
-            </div>
-
-            <div class="profile-item">
-              <div class="profile-icon Profile2"></div>
-              <p>Profile 2</p>
-            </div>
-
-            <div class="profile-item">
-              <div class="profile-icon Profile3"></div>
-              <p>Profile 3</p>
-            </div>
-          
+              <div class="profile-icon ">
+                <img src="assets/aril.jpeg" id="Profile1">
+              </div>
+              <p class="nama-profile"><i>Hello!</i></p>
+              <p class="nama-profiletext2"><i>Welcome to my photo gallery!</i></p>
+              <p class="nama-profiletext"> I'm Muhamad Syahril Suhandi. 
+                I love photographing various subjects, 
+                but there are certain types of photos I enjoy the most: 
+                minimalist photos and animal photos, especially cats. 
+                Enjoy my collection and I hope you find inspiration in every image I capture.</p>
+            </div>  
       </article>
 
     </section>
 
   <!--Ini Portofolio Content!-->
-<section class="message-us">
+    <section class="our-portofolio" id="our-portofolio">
+      <header class="header-section">
+          <h1 class="title-section"> Ssukapoto Gallery</h1>
+      </header>
 
-    <header>
-          <h1> Message Us </h1>
+      <article class="portofolio-content">
+
+            <div class="portofolio-item">
+              <div class="portofolio-icon portofolio1"></div>
+              <p class="title-photos">"Bendera"</p>
+            </div>
+
+            <div class="portofolio-item">
+              <div class="portofolio-icon portofolio2"></div>
+              <p class="title-photos">"Jingga"</p>
+            </div>
+
+            <div class="portofolio-item">
+              <div class="portofolio-icon portofolio3"></div>
+              <p class="title-photos">"Minimalis"</p>
+            </div>
+          
+      </article>
+
+    </section>
+  <!--Ini Message Us Content!-->
+  <section class="message-us" id="message-us">
+
+    <header class="header-section">
+          <h1 class="title-section"> Message Us </h1>
     </header>
 
     <div class="form">
   
-      <form id="form-messageus" action="#" method="post" onsubmit="return false;">
+      <form class="form-messageus" action="#" method="post" onsubmit="return false;">
         <table class="table-form">
-          <tr>
+          <tr class="rows">
           <td>Nama</td>
           <td>:</td>
-          <td><input id="nama" name="nama" type="text" placeholder="Nama "></input></td>
+          <td><input id="nama" name="nama" type="text" placeholder="Nama" required></input></td>
         </tr>
-        <tr>
+        <tr class="rows">
           <td>Tanggal Lahir</td>
           <td>:</td>
           <td><input id="tanggal_lahir" name="tanggal_lahir" type="date"></input></td>
         </tr>
-        <tr>
+        <tr class="rows">
           <td>Jenis Kelamin</td>
           <td>:</td>
           <td>
@@ -93,12 +118,12 @@
             <label> Perempuan</label>
           </td>
         </tr>
-        <tr>
+        <tr class="rows">
           <td>Pesan</td>
           <td>:</td>
           <td><textarea name="pesan" id="pesan" cols="45" rows="5"></textarea></input></td>
         </tr>
-        <tr>
+        <tr class="rows">
           <td colspan="3"><input id="submit" name="submit" type="submit" value="Submit" onclick="submitForm()"></input></td>
         </tr>
         </table>
@@ -109,16 +134,18 @@
     </div>
     
 </section>
-  <!--Ini Message Us Content!-->
-  
+
   </main>
   
   <script src="js/script.js"></script>
 
-  <footer class="footer">
-  <p>Created by Muhamad Syahril Suhandi</p>
-  </footer>
+  
 
 </body>
-
+<hr>
+<footer class="footer">
+    <h2>@Ssukapoto</h2>
+    <p>Indihiang</p>
+    <p>2024, Kota Tasikmalaya</p>
+  </footer>
 </html>

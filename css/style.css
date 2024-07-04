@@ -1,32 +1,90 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
 	.nav-container {
 		flex-direction: column;
+		padding: 10px;
 	}
+	.menu {
+		padding-top: 15px;
+	}
+
+	.menu > a {
+		font-size: 2px;
+	}
+
 	.form {
 		flex-direction: column;
 	}
 
-	//.form-message {
-	//	flex-direction: column;
-	//}
+	.form-messageus {
+		padding-left: 0px;
+	}
+
+	.table-form {
+		width: 100px;
+	}
+
+	.portofolio-content {
+		flex-direction: column;
+	}
+
+	.portofolio-icon.portofolio1 {
+		width: 300px;
+		height: 300px;
+	}
+
+	.portofolio-icon.portofolio2 {
+		width: 300px;
+		height: 300px;
+	}
+
+	.portofolio-icon.portofolio3 {
+		width: 300px;
+		height: 300px;
+	}
+
+	.portofolio-item {
+		align-self: center;
+	}
+
+	.Sapaan {
+		text-align: center;
+		font-size: 30px;
+	}
+	.menu {
+		display: inline-grid;
+		text-align: center;
+	}
+
+	.menu > a {
+		margin-bottom: 5px;
+	}
+
+	#textareaA {
+		align-self: center;
+	}
+
+	.banner-container {
+	}
 }
 
-//.main-web {
-//background-color: #a7e6ff;
-//padding-left: 100px;
-//-right: 100px;
-//padding-bottom: 50px;
-//}
+.main-web {
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 20px;
+}
 .logo-icon {
-	height: 50px;
-	width: 50px;
-	background-image: url(https://picsum.photos/200/300);
+	padding-right: 0px;
+	margin-right: 0px;
+	height: 80px;
+	width: 80px;
+	background-image: url(/assets/1.jpeg);
 	background-size: cover;
 	border-radius: 50%;
 }
+
 .nav-container {
-	//padding-left: 100px;
-	//padding-right: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -36,14 +94,37 @@
 //padding-left: 100px;
 //-right: 100px;
 //}
+.Sapaan {
+	text-align: center;
+	font-size: 30px;
+	font-family: system-ui;
+}
 .menu > a {
+	font-family: system-ui;
 	padding-left: 32px;
 	padding-right: 32px;
-	border: 1px solid;
+	border: 2px solid;
+	background-color: ;
+	border-radius: 10px;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.header-section {
+	text-align: center;
+	background-color: #d8efd3;
+	font-family: system-ui;
+}
+
+.title-section {
+	font-size: 40px;
 }
 
 .our-profile {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
 	border: 1px solid;
+	margin-bottom: 10px;
 }
 .our-profile > header > h1 {
 	padding-left: 20px;
@@ -54,77 +135,145 @@
 }
 
 .profile-item {
+	text-align: -webkit-center;
+}
+
+#Profile1 {
+	width: 300px;
+	height: 300px;
+	background-size: cover;
+	border-radius: 50%;
+}
+
+.profile-icon {
+	width: 300px;
+	height: 300px;
+}
+.nama-profile {
+	font-size: 30px;
+	font-family: monospace;
+	margin: 10px;
+}
+.nama-profile2 {
+	font-size: 30px;
+	font-family: monospace;
+	margin: 10px;
+	padding-bottom: 10px;
+}
+.nama-profiletext {
+	width: 500px;
+	font-size: 20px;
+	font-family: monospace;
+	margin: 10px;
+	padding-bottom: 10px;
+	text-align: justify;
+}
+.nama-profiletext2 {
+	width: 500px;
+	font-size: 20px;
+	font-family: monospace;
+	margin: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.our-portofolio {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	border: 1px solid;
+	margin-bottom: 10px;
+}
+.our-portofolio > header > h1 {
+	padding-left: 20px;
+}
+.portofolio-content {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.portofolio-item {
 	text-align: center;
 }
 
-.Profile1 {
-	background-image: url(https://picsum.photos/200/300);
+.title-photos {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 10px;
+}
+.portofolio1 {
+	background-image: url(/assets/a.jpg);
 	background-size: cover;
-	border-radius: 50%;
+	border-radius: 10%;
 	//background-image: url('.../assets/1.jpg');
 }
 
-.Profile2 {
-	background-image: url(https://picsum.photos/200/300);
+.portofolio2 {
+	background-image: url(/assets/b.jpg);
 	background-size: cover;
-	border-radius: 80%;
+	border-radius: 10%;
 	//background-image: url('.../assets/1.jpg');
 }
 
-.Profile3 {
-	background-image: url(https://picsum.photos/200/300);
+.portofolio3 {
+	background-image: url(/assets/c.jpg);
 	background-size: cover;
-	border-radius: 50%;
+	border-radius: 10%;
 	//background-image: url('.../assets/1.jpg');
 }
-.profile-icon {
-	width: 100px;
-	height: 100px;
+.portofolio-icon {
+	width: 400px;
+	height: 400px;
 }
 
 .message-us {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
 	border: 1px solid;
 	padding-top: 10px;
-	padding-left: 20px;
+	padding-left: 0px;
 	padding-bottom: 20px;
 }
 
 .banner-container {
-	height: 350px;
+	position: relative;
+	overflow: hidden;
+	height: 720px;
 	width: 100%;
-	background-image: url(https://picsum.photos/200/300);
+	border-radius: 20px;
+	margin-bottom: 15px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .footer {
-	border: 1px solid;
-	//padding-left: 100px;
-	padding-right: 50px;
-	//margin-left: 100px;
-	text-align: right;
+	//border: 1px solid;
+	text-align: center;
 }
 
 // FORM
-.table-form {
+
+td,
+tr {
+	width: 100px;
+	text-align: left;
+	padding: 5px;
 }
+
 .form {
 	display: flex;
 	justify-content: space-evenly;
 }
 
-td,
-th {
-	//border: 1px solid #dddddd;
-	text-align: left;
-	padding: 8px;
-}
 #nama,
 #tanggal_lahir,
+#pesan {
+	width: 200px;
+}
+
 #submit {
 	width: 100%;
 }
 
 #textareaA {
-	width: 500px;
+	width: 300px;
 	height: 150px;
 	margin-top: 10px;
 	padding: 8px;
@@ -135,6 +284,18 @@ th {
 	resize: none;
 }
 
+//.form-messageus {
+//	width: 550px;
+//	height: 300px;
+//	background-color: #fff;
+//	border-radius: 8px;
+//	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//}
+
+.table-form {
+	padding-left: 50px;
+}
+// CUMA TEMPLATE
 .form-container {
 	max-width: 400px;
 	background-color: #fff;
